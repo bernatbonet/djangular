@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static "/css/scrumboard.css" %}">
+    <title></title>
+</head>
+<body ng-app="scrumboard.demo">
+    <ng-view></ng-view>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+    <script src="{% static "js/scrumboard.js" %}"></script>
+    <script src="{% static "js/scrumboard.config.js" %}"></script>
+    <script src="{% static "js/card.directive.js" %}"></script>
+    <script src="{% static "js/login.controller.js" %}"></script>
+</body>
+</html>
