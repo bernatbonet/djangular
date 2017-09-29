@@ -7,11 +7,11 @@
     function LoginController($scope, $http, $location) {
         $scope.login = function() {
             $http.post('/auth_api/login/', $scope.user)
-                .then(function() {
+                .then(function(response) {
                     $location.url('/');
                 },
-                function() {
-                    $scope.login_error = "Invalid username/password combiantion";
+                function(error) {
+                    $scope.login_error_message = error.data.message;
                 });
         }
     }
