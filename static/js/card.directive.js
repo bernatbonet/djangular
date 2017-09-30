@@ -12,7 +12,7 @@
                 var url = '/scrumboard/cards/' + $scope.card.id + '/';
                 $scope.destList = $scope.list;
                 $scope.update = function() {
-                    $http.put(url, $scope.card);
+                    return $http.put(url, $scope.card);
                 };
                 function removeCardFromList(card, list) {
                     var cards = list.cards;
